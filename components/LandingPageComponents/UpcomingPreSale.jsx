@@ -50,7 +50,7 @@ export default function UpcomingPreSale() {
 
     return (
         <div className='bg-[#0F1312] pb-10'>
-            <div className="container mx-auto flex justify-between pb-10">
+            <div className="container mx-auto flex justify-between pb-10  w-11/12 lg:w-full">
                 <div className="flex items-center gap-4">
                     <picture>
                         <img src='/img/active.png' alt='hero' />
@@ -64,7 +64,7 @@ export default function UpcomingPreSale() {
                 </h3>
             </div>
 
-            <div className="container mx-auto">
+            <div className="container mx-auto  w-11/12 lg:w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-7">
                     {
                         upcomingPreSale.map((item, index) => (
