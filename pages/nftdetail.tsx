@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import Header from '../components/shared/Header'
 import Footer from '../components/shared/Footer'
+import Banner from '../components/nftDetailComponents/Banner'
+import FullDetails from '../components/nftDetailComponents/FullDetails'
 
 export default function nftdetail() {
     return (
@@ -12,7 +14,8 @@ export default function nftdetail() {
             </Head>
 
             <Header />
-            <h1 className='min-h-screen'>NFT Detail</h1>
+            <Banner />
+            <FullDetails />
             <Footer />
         </div>
     )

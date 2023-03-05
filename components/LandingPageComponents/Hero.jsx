@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="bg-[url('/img/gradient.png')] h-[750px] bg-cover bg-center bg-no-repeat">
             {/* space */}
             <div className='h-[100px]'></div>
-            <div className=' container mx-auto  bg-[#3AC5A6] h--[700px] lg:h-[550px] rounded-2xl flex flex-col lg:flex-row items-center justify-between  w-11/12 lg:w-full'>
+            <div className=' container mx-auto  bg-[#3AC5A6] h-[700px] lg:h-[550px] rounded-2xl flex flex-col lg:flex-row items-center justify-between  w-11/12 lg:w-full'>
                 <div className='lg:pl-14 w-5/6 lg:w-1/3 pt-5 lg:pt-0'>
                     <button className='bg-[#6BD4BC] rounded-lg px-3 py-2 text-white font-semibold text-sm'>
                         PRE-SALE IS ACTIVE

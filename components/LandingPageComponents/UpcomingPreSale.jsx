@@ -44,7 +44,6 @@ export default function UpcomingPreSale() {
             timeLeft: '05h 40m 02s',
             tokenImage: '/img/solana.png'
         },
-
     ]
 
 
@@ -87,9 +86,7 @@ export default function UpcomingPreSale() {
                                                 {item.timeLeft}
                                             </h3>
                                         </div>
-
                                     </div>
-
                                     <div className="flex justify-between items-center pt-2">
                                         <h3 className='text-white font-semibold text-xs'> <span className='text-gray-400 font-normal'>{item.supply} supply</span> </h3>
                                         <div className="flex items-center gap-1">
