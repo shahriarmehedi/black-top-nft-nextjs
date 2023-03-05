@@ -46,10 +46,9 @@ export default function FullDetails() {
     return (
         <div className='bg-[#0C0D0E] text-white'>
             <div className='container mx-auto'>
-                <h3 className='text-xl font-semibold pb-5'>
+                <h3 className='text-xl font-semibold pb-5 px-5 lg:px-0'>
                     Full Details
                 </h3>
-
 
                 <div className='flex flex-col lg:flex-row gap-10'>
                     <div className=' w-full px-5 lg:px-0 lg:w-1/2 lg:mr-10'>
@@ -84,7 +83,7 @@ export default function FullDetails() {
                             </div>
                         </div>
                         <div>
-                            <h3 className='text-2xl font-semibold pt-10 pb-5'>Utility</h3>
+                            <h3 className='text-2xl font-semibold pt-10 pb-5'>Advisors</h3>
                             <div className='flex flex-col gap-0'>
                                 {/* list items with bullet point */}
                                 <div className='flex items-center gap-3'>
@@ -108,7 +107,31 @@ export default function FullDetails() {
                             </div>
                         </div>
                         <div>
-                            <h3 className='text-2xl font-semibold pt-10 pb-5'>Utility</h3>
+                            <h3 className='text-2xl font-semibold pt-10 pb-5'>Partnerships</h3>
+                            <div className='flex flex-col gap-0'>
+                                {/* list items with bullet point */}
+                                <div className='flex items-center gap-3'>
+                                    <div className='w-2 h-2 bg-[#00FF7F] rounded-full'></div>
+                                    <p className='text-lg text-gray-300'>
+                                        5555 unique MoonHolders
+                                    </p>
+                                </div>
+                                <div className='flex items-center gap-3'>
+                                    <div className='w-2 h-2 bg-[#00FF7F] rounded-full'></div>
+                                    <p className='text-lg text-gray-300'>
+                                        5555 unique MoonHolders
+                                    </p>
+                                </div>
+                                <div className='flex items-center gap-3'>
+                                    <div className='w-2 h-2 bg-[#00FF7F] rounded-full'></div>
+                                    <p className='text-lg text-gray-300'>
+                                        5555 unique MoonHolders
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className='text-2xl font-semibold pt-10 pb-5'>Mint Funds Breakdown</h3>
                             <div className='flex flex-col gap-0'>
                                 {/* list items with bullet point */}
                                 <div className='flex items-center gap-3'>
