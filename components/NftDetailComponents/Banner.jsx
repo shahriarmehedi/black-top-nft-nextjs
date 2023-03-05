@@ -4,11 +4,11 @@ export default function Banner() {
 
     return (
 
-        <div className="bg-[url('/img/background.png')] h-[850px] bg-cover bg-center bg-no-repeat">
+        <div className="bg-[url('/img/background.png')] lg:h-[850px] pb-10 lg:pb-0 bg-cover bg-center bg-no-repeat">
             {/* space */}
             <div className='h-[100px]'></div>
             <div className=' container mx-auto  bg-[#242826] border-[1px] border-[#555E59] rounded-2xl flex flex-col lg:flex-row justify-between  w-11/12 lg:w-full'>
-                <div className='w-full lg:w-[36%] lg:pl-10 py-10'>
+                <div className='w-full lg:w-[36%] px-5 lg:px-10 py-10'>
                     <div className='flex gap-2'>
                         <button className='flex gap-2 items-center bg-[#00FF7F] bg-opacity-[0.15] px-3 py-2 rounded-full'>
                             <picture>

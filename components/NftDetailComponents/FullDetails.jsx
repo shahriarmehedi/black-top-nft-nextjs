@@ -51,8 +51,8 @@ export default function FullDetails() {
                 </h3>
 
 
-                <div className='flex'>
-                    <div className='w-1/2 lg:mr-10'>
+                <div className='flex flex-col lg:flex-row gap-10'>
+                    <div className=' w-full px-5 lg:px-0 lg:w-1/2 lg:mr-10'>
                         <h2 className='text-4xl font-semibold pb-7'>MoonHolders</h2>
                         <p className='text-lg text-gray-300'>
                             The MoonHolders is an NFT collection of 5555 pixel art aliens, on the Solana blockchain which will offer a multitude of benefits for holders and users of the MoonHoldings web3 portfolio app. <span className='text-[#00FF7F]'>https://MoonHoldings.xyz</span> <br /> <br />
@@ -135,11 +135,11 @@ export default function FullDetails() {
 
 
 
-                    <div className='w-1/2 bg-[#242826] rounded-lg p-10 lg:ml-10'>
-                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-7'>
+                    <div className='w-full lg:w-1/2 bg-[#242826] rounded-xl p-10 lg:ml-10'>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
                             {
                                 peoples.map((person, index) => (
-                                    <div>
+                                    <div key={index}>
                                         <picture>
                                             <img src="/img/peopleimg.png" alt="" className='w-full' />
                                         </picture>
@@ -168,14 +168,10 @@ export default function FullDetails() {
                                                 {person.description}
                                             </p>
                                         </div>
-
-
                                     </div>
                                 ))
                             }
-
                         </div>
-
                     </div>
                 </div>
             </div>
