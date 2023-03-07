@@ -66,7 +66,7 @@ export default function Presale() {
                     <div className='lg:w-1/2 mx-auto'>
                         <h1 className='text-4xl font-bold  text-white pt-10'>Create Pre-Sale Page</h1>
 
-                        {/* -------------STEP ONE------------- */}
+                        {/* -------------STEP ONE [BLOCKCHAIN SELECTION]------------- */}
                         {
                             stepOne && (
                                 <>
@@ -93,7 +93,7 @@ export default function Presale() {
                         }
 
 
-                        {/* -------------STEP TWO------------- */}
+                        {/* -------------STEP TWO [FORM]------------- */}
                         {
                             stepTwo && (
                                 <><p className=' text-gray-500 text-xl pt-3'>
@@ -104,7 +104,7 @@ export default function Presale() {
                                         <label className='text-white text-sm font-semibold'>Upload File</label>
                                         <div
                                             style={{ backgroundImage: `url(${imageURL})` }}
-                                            className={`flex flex-col items-center justify-center border-dashed border-2 border-gray-800 rounded-2xl h-[300px] mt-2 mb-2`}>
+                                            className={`flex bg-cover flex-col items-center justify-center border-dashed border-2 border-gray-800 rounded-2xl h-[300px] mt-2 mb-2`}>
                                             <button className='bg-[#242826] text-white rounded-2xl px-5 py-3 mt-3'>Drag and Drop or Upload File</button>
                                             {/* input file */}
                                             <input type="file" onChange={(event) => setImage(event.target.files[0])} className=' opacity-0 cursor-pointer relative bottom-10 left-5' />
@@ -115,19 +115,38 @@ export default function Presale() {
 
                                         <div className='flex flex-col gap-3'>
                                             <label className='text-white text-sm font-semibold'>Collection Name</label>
-                                            <input type="text" className='bg-[#242826] text-white rounded-2xl px-5 py-3' />
+                                            <input type="text" placeholder='Collection Name' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
                                         </div>
                                         <div className='flex flex-col gap-3 mt-5'>
                                             <label className='text-white text-sm font-semibold'>Description</label>
-                                            <textarea type="text" className='bg-[#242826] text-white rounded-2xl px-5 py-3' />
+                                            <textarea type="text" placeholder='e.g. “BlackTop is a premier NFT presale platform”' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
                                         </div>
                                         <div className='flex flex-col gap-3 mt-5'>
                                             <label className='text-white text-sm font-semibold'>Price</label>
-                                            <input type="number" className='bg-[#242826] text-white rounded-2xl px-5 py-3' />
+                                            <input type="number" placeholder='Solana Per Sale' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
                                         </div>
                                         <div className='flex flex-col gap-3 mt-5'>
                                             <label className='text-white text-sm font-semibold'>Supply</label>
-                                            <input type="text" className='bg-[#242826] text-white rounded-2xl px-5 py-3' />
+                                            <input type="number" placeholder='Amount' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>Limit per wallet</label>
+                                            <input type="number" placeholder='Amount' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>Sale visibility</label>
+                                            <select className='bg-[#242826] text-white rounded-lg px-5 py-3'>
+                                                <option value="public">Public</option>
+                                                <option value="private">Private</option>
+                                            </select>
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>Twitter link</label>
+                                            <input type="text" placeholder='https://twitter.com/username' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>Discord link</label>
+                                            <input type="text" placeholder='https://discord.gg/invite' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
                                         </div>
                                     </div>
                                 </>
@@ -153,9 +172,9 @@ export default function Presale() {
                         <div className='bg-[#242826] rounded-2xl pb-5'>
                             <picture>
                                 {
-                                    image ? (<img src={
-                                        URL.createObjectURL(image)
-                                    } alt='hero' />) : (<img src="/img/noimage.png" alt='hero' />)
+                                    image ? (
+                                        <img className='h-[330px] w-full object-cover rounded-t-2xl' src={URL.createObjectURL(image)} alt='hero' />) :
+                                        (<img className='h-[330px] w-full object-cover rounded-t-2xl' src="/img/noimage.png" alt='hero' />)
                                 }
                             </picture>
                             <div className='px-5 pt-5'>
@@ -236,9 +255,17 @@ export default function Presale() {
                         </div>
 
                         <div className='mt-5'>
-                            <button className='bg-[#003319] w-full py-5 text-black rounded-2xl'>
-                                Continue
-                            </button>
+                            {
+                                stepTwo ? (
+                                    <button className='bg-[#00FF7D] font-semibold w-full py-5 text-black rounded-2xl'>
+                                        Continue
+                                    </button>
+                                ) : (
+                                    <button className='bg-[#003319] font-semibold w-full py-5 text-black rounded-2xl'>
+                                        Continue
+                                    </button>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
