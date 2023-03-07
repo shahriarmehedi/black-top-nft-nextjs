@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Presale() {
 
@@ -27,6 +27,10 @@ export default function Presale() {
     }
 
 
+    const [image, setImage] = useState(null);
+
+
+
     const allBlockchain = [
         {
             id: 1,
@@ -49,6 +53,8 @@ export default function Presale() {
             logo: '/img/bitcoinlogo.png'
         },
     ]
+
+    const imageURL = image ? URL.createObjectURL(image) : null;
 
 
 
@@ -96,10 +102,12 @@ export default function Presale() {
                                     <div className='mt-14'>
                                         {/* drag and drop file upload inside dotted box */}
                                         <label className='text-white text-sm font-semibold'>Upload File</label>
-                                        <div className='flex flex-col items-center justify-center border-dashed border-2 border-gray-800 rounded-2xl h-[300px] mt-2 mb-2'>
+                                        <div
+                                            style={{ backgroundImage: `url(${imageURL})` }}
+                                            className={`flex flex-col items-center justify-center border-dashed border-2 border-gray-800 rounded-2xl h-[300px] mt-2 mb-2`}>
                                             <button className='bg-[#242826] text-white rounded-2xl px-5 py-3 mt-3'>Drag and Drop or Upload File</button>
                                             {/* input file */}
-                                            <input type="file" className=' opacity-0 cursor-pointer relative bottom-10 left-5' />
+                                            <input type="file" onChange={(event) => setImage(event.target.files[0])} className=' opacity-0 cursor-pointer relative bottom-10 left-5' />
                                         </div>
                                         <p className='text-gray-400 text-sm mb-5'>
                                             PNG, GIF, WEBP, MP4 are supported up to 100mb.
@@ -134,6 +142,9 @@ export default function Presale() {
                     </div>
                 </div>
 
+
+                {/* -----------------PREVIEW PART---------------- */}
+
                 <div className=' w-full lg:w-[40%] border-l-[1px] border-gray-800 lg:pl-10'>
                     <div className='lg:w-3/5 lg:pl-7'>
                         <h3 className='text-gray-200 text-lg font-semibold pt-14 pb-5'>
@@ -141,7 +152,11 @@ export default function Presale() {
                         </h3>
                         <div className='bg-[#242826] rounded-2xl pb-5'>
                             <picture>
-                                <img src='/img/noimage.png' className='w-full' alt='hero' />
+                                {
+                                    image ? (<img src={
+                                        URL.createObjectURL(image)
+                                    } alt='hero' />) : (<img src="/img/noimage.png" alt='hero' />)
+                                }
                             </picture>
                             <div className='px-5 pt-5'>
                                 <div className="flex items-center">
