@@ -347,7 +347,7 @@ export default function Presale() {
                         <div className='mt-5'>
                             {
                                 stepOne && (
-                                    <button className='bg-[#003319] font-semibold w-full py-5 text-black rounded-2xl'>
+                                    <button className='bg-[#00FF7D] font-semibold w-full py-5 text-black rounded-2xl'>
                                         Continue
                                     </button>
                                 )
