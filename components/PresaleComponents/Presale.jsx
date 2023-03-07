@@ -60,7 +60,7 @@ export default function Presale() {
 
 
     return (
-        <div className='bg-[#0C0D0C] border-t-[1px] border-gray-800'>
+        <div className='bg-[#0C0D0C] border-t-[1px] border-[#242826]'>
             <div className='container mx-auto flex flex-col lg:flex-row pb-20 '>
                 <div className=' w-full lg:w-[60%]'>
                     <div className='lg:w-1/2 mx-auto'>
@@ -76,7 +76,7 @@ export default function Presale() {
                                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-14'>
                                         {
                                             allBlockchain.map((item, index) => (
-                                                <div key={index} onClick={() => handleStepOne(item.id)} className='border-[1px] hover:border-[3px] transition duration-200 border-gray-800 hover:border-gray-300 rounded-2xl p-7'>
+                                                <div key={index} onClick={() => handleStepOne(item.id)} className='border-[1px] hover:border-[3px] transition duration-200 border-[#242826] hover:border-gray-300 rounded-2xl p-7'>
                                                     <picture className='flex justify-center'>
                                                         <img src={item.logo} alt='solana' />
                                                     </picture>
@@ -96,15 +96,16 @@ export default function Presale() {
                         {/* -------------STEP TWO [FORM]------------- */}
                         {
                             stepTwo && (
-                                <><p className=' text-gray-500 text-xl pt-3'>
-                                    Enter your details
-                                </p>
+                                <>
+                                    <p className=' text-gray-500 text-xl pt-3'>
+                                        Enter your details
+                                    </p>
                                     <div className='mt-14'>
                                         {/* drag and drop file upload inside dotted box */}
                                         <label className='text-white text-sm font-semibold'>Upload File</label>
                                         <div
                                             style={{ backgroundImage: `url(${imageURL})` }}
-                                            className={`flex bg-cover flex-col items-center justify-center border-dashed border-2 border-gray-800 rounded-2xl h-[300px] mt-2 mb-2`}>
+                                            className={`flex bg-cover flex-col items-center justify-center border-dashed border-2 border-[#242826] rounded-2xl h-[300px] mt-2 mb-2`}>
                                             <button className='bg-[#242826] text-white rounded-2xl px-5 py-3 mt-3'>Drag and Drop or Upload File</button>
                                             {/* input file */}
                                             <input type="file" onChange={(event) => setImage(event.target.files[0])} className=' opacity-0 cursor-pointer relative bottom-10 left-5' />
@@ -156,6 +157,72 @@ export default function Presale() {
 
                         }
 
+                        {/* -------------STEP THREE [TEAM MEMBER]------------- */}
+
+                        {
+                            stepThree && (
+                                <>
+                                    <p className=' text-gray-500 text-xl pt-3'>
+                                        Setup your details
+                                    </p>
+                                    <div className='mt-14 border-[1px] border-[#242826] rounded-xl p-7'>
+                                        <div className='flex items-center justify-between'>
+                                            <p className=' text-white font-semibold pb-3 text-2xl pt-3'>
+                                                Team member 1
+                                            </p>
+                                            <picture className='cursor-pointer'>
+                                                <img src="/img/delete.png" alt="" />
+                                            </picture>
+                                        </div>
+                                        {/* drag and drop file upload inside dotted box */}
+                                        <label className='text-white text-sm font-semibold'>Profile picture</label>
+                                        <div
+                                            style={{ backgroundImage: `url(${imageURL})` }}
+                                            className={`flex bg-cover flex-col items-center justify-center border-dashed border-2 border-[#242826] rounded-2xl h-[300px] mt-2 mb-2`}>
+                                            <button className='bg-[#242826] text-white rounded-2xl px-5 py-3 mt-3'>Drag and Drop or Upload File</button>
+                                            {/* input file */}
+                                            <input type="file" onChange={(event) => setImage(event.target.files[0])} className=' opacity-0 cursor-pointer relative bottom-10 left-5' />
+                                        </div>
+                                        <p className='text-gray-400 text-sm mb-5'>
+                                            PNG, GIF, WEBP, MP4 are supported up to 100mb.
+                                        </p>
+
+                                        <div className='flex flex-col gap-3'>
+                                            <label className='text-white text-sm font-semibold'>Name</label>
+                                            <input type="text" placeholder='Collection Name' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>Role</label>
+                                            <input type="text" placeholder='Solana Per Sale' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>About</label>
+                                            <textarea type="text" placeholder='e.g. “With over 10 years of experience...””' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>Twitter link</label>
+                                            <input type="text" placeholder='https://twitter.com/username' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                        <div className='flex flex-col gap-3 mt-5'>
+                                            <label className='text-white text-sm font-semibold'>LinkedIn</label>
+                                            <input type="text" placeholder='https://discord.gg/invite' className='bg-[#242826] text-white rounded-lg px-5 py-3' />
+                                        </div>
+                                    </div>
+
+                                    <div className='mt-7'>
+                                        <div className='border-[#242826] hover:border-white transition duration-200 border-[1px] w-full text-white rounded-lg px-5 py-5 mt-5 flex items-center gap-5 cursor-pointer'>
+                                            <picture>
+                                                <img src="/img/plus.png" alt="" />
+                                            </picture>
+                                            <p>
+                                                Add another team member
+                                            </p>
+                                        </div>
+                                    </div>
+                                </>
+                            )
+                        }
+
 
 
                     </div>
@@ -164,7 +231,7 @@ export default function Presale() {
 
                 {/* -----------------PREVIEW PART---------------- */}
 
-                <div className=' w-full lg:w-[40%] border-l-[1px] border-gray-800 lg:pl-10'>
+                <div className=' w-full lg:w-[40%] border-l-[1px] border-[#242826] lg:pl-10'>
                     <div className='lg:w-3/5 lg:pl-7'>
                         <h3 className='text-gray-200 text-lg font-semibold pt-14 pb-5'>
                             Preview
@@ -224,7 +291,7 @@ export default function Presale() {
                                 )
                             }
                             {
-                                stepTwo ? (
+                                stepTwo && (
                                     <div className='bg-[#242826] py-4 w-full px-5 flex justify-between rounded-full'>
                                         <h3 className='text-white font-semibold'>
                                             1 <span className='pl-3'>Details</span>
@@ -233,7 +300,7 @@ export default function Presale() {
                                             In progress
                                         </h3>
                                     </div>
-                                ) : (
+                                ) || stepOne && (
                                     <div className='border-[#242826] border-[1px] py-4 w-full px-5 flex justify-between rounded-full'>
                                         <h3 className='text-white font-semibold'>
                                             1 <span className='pl-3'>Details</span>
@@ -242,27 +309,60 @@ export default function Presale() {
                                             {/* In progress */}
                                         </h3>
                                     </div>
+                                ) || stepThree && (
+                                    <div className='border-[#242826] border-[1px] py-4 w-full px-5 flex justify-between rounded-full'>
+                                        <h3 className='text-white font-semibold'>
+                                            1 <span className='pl-3'>Details</span>
+                                        </h3>
+                                        <h3 className='text-gray-500'>
+                                            Completed
+                                        </h3>
+                                    </div>
                                 )
                             }
-                            <div className='border-[#242826] border-[1px] py-4 w-full px-5 flex justify-between rounded-full'>
-                                <h3 className='text-white font-semibold'>
-                                    1 <span className='pl-3'>Team info</span>
-                                </h3>
-                                <h3 className='text-white'>
-                                    {/* In progress */}
-                                </h3>
-                            </div>
+
+                            {
+                                stepThree ? (
+                                    <div className='bg-[#242826] py-4 w-full px-5 flex justify-between rounded-full'>
+                                        <h3 className='text-white font-semibold'>
+                                            1 <span className='pl-3'>Team Info</span>
+                                        </h3>
+                                        <h3 className='text-white'>
+                                            In progress
+                                        </h3>
+                                    </div>
+                                ) : (
+                                    <div className='border-[#242826] border-[1px] py-4 w-full px-5 flex justify-between rounded-full'>
+                                        <h3 className='text-white font-semibold'>
+                                            1 <span className='pl-3'>Team Info</span>
+                                        </h3>
+                                        <h3 className='text-white'>
+                                            {/* In progress */}
+                                        </h3>
+                                    </div>
+                                )
+                            }
                         </div>
 
                         <div className='mt-5'>
                             {
-                                stepTwo ? (
-                                    <button className='bg-[#00FF7D] font-semibold w-full py-5 text-black rounded-2xl'>
-                                        Continue
-                                    </button>
-                                ) : (
+                                stepOne && (
                                     <button className='bg-[#003319] font-semibold w-full py-5 text-black rounded-2xl'>
                                         Continue
+                                    </button>
+                                )
+                            }
+                            {
+                                stepTwo && (
+                                    <button onClick={handleStepThree} className='bg-[#00FF7D] font-semibold w-full py-5 text-black rounded-2xl'>
+                                        Continue
+                                    </button>
+                                )
+                            }
+                            {
+                                stepThree && (
+                                    <button onClick={handleStepThree} className='bg-[#00FF7D] font-semibold w-full py-5 text-black rounded-2xl'>
+                                        Launch
                                     </button>
                                 )
                             }
