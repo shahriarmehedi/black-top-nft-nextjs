@@ -137,7 +137,7 @@ export default function Collection() {
                         </div>
 
                         <div className='bg-[#00FF7F] p-5 text-black rounded-xl mt-5'>
-                            <div className="flex justify-between items-center">
+                            <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between items-center">
                                 <div>
                                     <h3 className='text-2xl font-bold'>
                                         Free staking is on its way!
@@ -155,7 +155,7 @@ export default function Collection() {
                         </div>
 
                         <div className='border-[#242826] border-[1px] p-5 rounded-xl mt-5 text-white'>
-                            <div className="flex justify-between items-center mb-5">
+                            <div className="flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between items-center mb-5">
                                 <h3 className='font-semibold'>Sale Overview</h3>
                                 <div className='flex items-center px-4 py-1 gap-3 bg-[#242826] rounded-lg'>
                                     <h4>walllet:</h4>
@@ -197,8 +197,8 @@ export default function Collection() {
                                     Export List
                                 </button>
                             </div>
-                            <div className="flex justify-between items-center mb-5">
-                                <div className='flex items-center'>
+                            <div className="flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between items-center mb-5">
+                                <div className='flex items-center w-full'>
                                     <input type="text" name="" placeholder='Search List  (Twitter, Discord, Username)' id="" className='px-5 w-full lg:w-[370px] py-2 bg-[#242826] text-white rounded-lg' />
                                     <picture>
                                         <img src="/img/search.png" alt="" className='relative right-8' />
@@ -216,10 +216,10 @@ export default function Collection() {
                             </div>
 
 
-                            <div>
-                                <table className='w-full table-auto'>
+                            <div className=' overflow-x-scroll lg:overflow-x-auto'>
+                                <table className='w-full table-auto overflow-x-scroll'>
                                     <thead>
-                                        <tr className='text-[#AFB6B2] text-xs'>
+                                        <tr className='text-[#AFB6B2] text-xs gap-2'>
                                             <th className='py-3 text-left'>Username</th>
                                             <th className='py-3'>Discord ID</th>
                                             <th className='py-3'>Twitter @</th>
@@ -230,7 +230,7 @@ export default function Collection() {
                                     <tbody>
                                         {
                                             tableData.map((item, index) => (
-                                                <tr key={index} className='text-white text-xs'>
+                                                <tr key={index} className='text-white text-xs gap-2'>
                                                     <td className='py-3 text-left'>
                                                         {item.username}
                                                     </td>
@@ -253,7 +253,10 @@ export default function Collection() {
                                     </tbody>
                                 </table>
 
-                                <div className="flex mt-10 justify-between items-center">
+                                {/* mobile device table */}
+
+
+                                <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 mt-10 justify-between items-center">
                                     <div className='flex items-center gap-2'>
                                         <h3>
                                             Page:
