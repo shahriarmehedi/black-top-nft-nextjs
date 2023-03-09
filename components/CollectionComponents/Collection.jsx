@@ -253,7 +253,7 @@ export default function Collection() {
                                     </tbody>
                                 </table>
 
-                                <div className="flex mt-5 justify-between items-center">
+                                <div className="flex mt-10 justify-between items-center">
                                     <div className='flex items-center gap-2'>
                                         <h3>
                                             Page:
