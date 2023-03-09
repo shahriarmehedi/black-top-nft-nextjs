@@ -61,7 +61,7 @@ export default function Presale() {
 
     return (
         <div className='bg-[#0C0D0C] border-t-[1px] border-[#242826]'>
-            <div className='container mx-auto flex flex-col lg:flex-row pb-20 '>
+            <div className='container mx-auto px-5 lg:px-0 flex flex-col lg:flex-row pb-20 '>
                 <div className=' w-full lg:w-[60%]'>
                     <div className='lg:w-1/2 mx-auto'>
                         <h1 className='text-4xl font-bold  text-white pt-10'>Create Pre-Sale Page</h1>

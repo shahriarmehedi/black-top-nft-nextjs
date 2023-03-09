@@ -109,7 +109,7 @@ export default function Collection() {
                     <div className='w-full lg:w-[55%] lg:pl-20'>
                         <div className='bg-[#242826] rounded-xl p-5'>
                             <div className="flex flex-col lg:flex-row justify-between items-center">
-                                <div className="flex gap-3 items-center">
+                                <div className="w-full lg:w-1/2 flex gap-3 items-center">
                                     <picture>
                                         <img src="/img/collectionprofile.png" alt="" />
                                     </picture>
@@ -118,7 +118,7 @@ export default function Collection() {
                                         <button className='text-[#AFB6B2] mt-2 text-xs px-2 py-1 rounded-lg border-[#AFB6B2] border-[1px]'>Free tier</button>
                                     </div>
                                 </div>
-                                <div className='flex  gap-3 mt-7 lg:mt-0'>
+                                <div className='flex w-full lg:w-1/2 lg:justify-end gap-3 mt-7 lg:mt-0'>
                                     <button className='font-semibold px-7 py-2 rounded-lg border-[#AFB6B2] border-[1px]'>Edit</button>
                                     <button className='font-semibold px-5 py-2 rounded-lg bg-[#00FF7F] text-black'>Visit page</button>
                                 </div>
@@ -204,7 +204,7 @@ export default function Collection() {
                                         <img src="/img/search.png" alt="" className='relative right-8' />
                                     </picture>
                                 </div>
-                                <div className='flex items-center border-[#242826]  border-[1px] px-7 rounded-lg '>
+                                <div className='flex w-full lg:w-[300px] items-center border-[#242826]  border-[1px] px-7 rounded-lg '>
                                     <p className='text-[#AFB6B2]'>
                                         Filter by:
                                     </p>
