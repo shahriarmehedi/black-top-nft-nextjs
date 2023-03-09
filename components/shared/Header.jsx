@@ -71,7 +71,7 @@ export default function Header() {
                                             <p className='text-[#00FF7F] text-sm'>Birdie Holder</p>
                                         </div>
                                     </div>
-                                    <h3 className='text-lg text-white font-semibold my-3'>Account</h3>
+                                    <h3 className='text-lg text-white font-semibold mt-3'>Account</h3>
                                     <Menu.Item className='hover:bg-[#454847] p-2 rounded-md cursor-pointer'>
                                         <div className='flex items-center gap-3'>
                                             <picture>
