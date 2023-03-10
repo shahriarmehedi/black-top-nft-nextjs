@@ -48,12 +48,12 @@ export default function ActivePreSale() {
 
     return (
         <div className='bg-[#0F1312] pb-10 pt-14 lg:pt-0'>
-            <div className="container mx-auto flex justify-between pb-10  w-11/12 lg:w-full">
+            <div className="container mx-auto flex justify-between pb-7  w-11/12 lg:w-full mt-10 lg:mt-0">
                 <div className="flex items-center gap-4">
                     <picture>
                         <img src='/img/active.png' alt='hero' />
                     </picture>
-                    <h3 className='text-white text-2xl font-semibold'>
+                    <h3 className='text-white text-2xl font-semibold '>
                         Active Pre-Sales
                     </h3>
                 </div>
