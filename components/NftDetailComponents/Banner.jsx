@@ -26,20 +26,20 @@ export default function Banner() {
 
                     <div>
                         <h1 className='text-white text-3xl font-bold mt-5'>MoonHolders</h1>
-                        <div className='pt-5 flex items-center gap-3'>
-                            <button className='flex items-center gap-2 text-white border-[1px] border-[#555E59] p-3 rounded-xl'>
+                        <div className='pt-5 flex items-center gap-2 lg:gap-3'>
+                            <button className='flex text-xs lg:text-base items-center gap-2 lg:gap-2 text-white border-[1px] border-[#555E59] p-3 rounded-xl'>
                                 <picture>
                                     <img src='/img/text.png' className='' alt='hero' />
                                 </picture>
                                 WhitePaper
                             </button>
-                            <button className='flex items-center gap-2 text-white border-[1px] border-[#555E59] p-3 rounded-xl'>
+                            <button className='flex text-xs lg:text-base items-center gap-2 lg:gap-2 text-white border-[1px] border-[#555E59] p-3 rounded-xl'>
                                 <picture>
                                     <img src='/img/text.png' className='' alt='hero' />
                                 </picture>
                                 WhitePaper
                             </button>
-                            <button className='flex items-center gap-2 text-white border-[1px] border-[#555E59] p-3 rounded-xl'>
+                            <button className='flex text-xs lg:text-base items-center gap-2 lg:gap-2 text-white border-[1px] border-[#555E59] p-3 rounded-xl'>
                                 <picture>
                                     <img src='/img/text.png' className='' alt='hero' />
                                 </picture>

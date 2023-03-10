@@ -5,7 +5,7 @@ import Footer from '../components/shared/Footer'
 import Collection from '../components/CollectionComponents/Collection'
 export default function collection() {
     return (
-        <div>
+        <div className='mt-[68px] lg:mt-0'>
             <Head>
                 <title>BlackTop</title>
                 <link rel="icon" href="/favicon.ico" />

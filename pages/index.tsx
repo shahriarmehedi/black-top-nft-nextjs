@@ -9,7 +9,7 @@ import Footer from '../components/shared/Footer'
 
 const Home: NextPage = () => {
   return (
-    <div >
+    <div className='mt-[68px] lg:mt-0'>
       <Head>
         <title>BlackTop</title>
         <link rel="icon" href="/favicon.ico" />

@@ -14,13 +14,13 @@ export default function Footer() {
                         </h3>
                     </div>
 
-                    <p className='text-gray-200 py-5 text-center lg:text-left'>
+                    <p className='text-gray-200 text-sm lg:text-base py-5 text-center lg:text-left'>
                         The premier Solana pre-sale NFT platform.
                     </p>
                 </div>
 
                 {/* footer menus 3 column */}
-                <div className="flex flex-col lg:flex-row items-center gap-24">
+                <div className=" text-sm lg:text-base grid grid-cols-2 lg:grid-cols-3  items-center gap-7 lg:gap-24">
                     <div className="flex flex-col gap-5">
                         <h3 className='text-white text-lg font-semibold'>
                             Payment
@@ -68,7 +68,7 @@ export default function Footer() {
             </div>
             <hr className='border-gray-800' />
             <div>
-                <div className='container mx-auto w-11/12 lg:w-full flex justify-between py-10'>
+                <div className='container mx-auto w-11/12 lg:w-full flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between py-10'>
                     <div className="flex items-center gap-4">
 
                         <h3 className='text-white font-semibold'>

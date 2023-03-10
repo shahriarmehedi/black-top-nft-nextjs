@@ -44,7 +44,7 @@ export default function FullDetails() {
 
 
     return (
-        <div className='bg-[#0C0D0E] text-white'>
+        <div className='bg-[#0C0D0E] text-white pb-14 lg:pb-20'>
             <div className='container mx-auto'>
                 <h3 className='text-xl font-semibold pb-5 px-5 lg:px-0'>
                     Full Details

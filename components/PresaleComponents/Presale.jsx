@@ -231,7 +231,7 @@ export default function Presale() {
 
                 {/* -----------------PREVIEW PART---------------- */}
 
-                <div className=' w-full lg:w-[40%] border-l-[1px] border-[#242826] lg:pl-10'>
+                <div className=' w-full lg:w-[40%] lg:border-l-[1px] border-[#242826] lg:pl-10'>
                     <div className='lg:w-3/5 lg:pl-7'>
                         <h3 className='text-gray-200 text-lg font-semibold pt-14 pb-5'>
                             Preview

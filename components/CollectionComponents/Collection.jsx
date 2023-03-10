@@ -87,7 +87,7 @@ export default function Collection() {
     ]
     return (
         <div className='bg-[#0C0D0C] text-white'>
-            <div className='container mx-auto py-20 px-5 lg:px-0'>
+            <div className='container mx-auto pb-20 pt-10 lg:pt-20 px-5 lg:px-0'>
                 <div className='flex flex-col lg:flex-row'>
 
                     {/* ----SIDEBAR---- */}
@@ -119,8 +119,8 @@ export default function Collection() {
                                     </div>
                                 </div>
                                 <div className='flex w-full lg:w-1/2 lg:justify-end gap-3 mt-7 lg:mt-0'>
-                                    <button className='font-semibold px-7 py-2 rounded-lg border-[#AFB6B2] border-[1px]'>Edit</button>
-                                    <button className='font-semibold px-5 py-2 rounded-lg bg-[#00FF7F] text-black'>Visit page</button>
+                                    <button className='font-semibold text-xs lg:text-base px-7 py-[10px] rounded-lg border-[#AFB6B2] border-[1px]'>Edit</button>
+                                    <button className='font-semibold text-xs lg:text-base px-5 py-2 rounded-lg bg-[#00FF7F] text-black'>Visit page</button>
                                 </div>
                             </div>
                             <div className='bg-[#0C0D0C] mt-7 p-5 rounded-xl'>
@@ -139,7 +139,7 @@ export default function Collection() {
                         <div className='bg-[#00FF7F] p-5 text-black rounded-xl mt-5'>
                             <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between items-center">
                                 <div>
-                                    <h3 className='text-2xl font-bold'>
+                                    <h3 className='text-xl lg:text-2xl font-bold'>
                                         Free staking is on its way!
                                     </h3>
                                     <p>
@@ -147,7 +147,7 @@ export default function Collection() {
                                     </p>
                                 </div>
                                 <div>
-                                    <button className='p-10 py-4 rounded-lg bg-black text-white font-semibold'>
+                                    <button className='p-7 lg:p-10 py-3 lg:py-4 rounded-lg bg-black text-white font-semibold'>
                                         Join Discord
                                     </button>
                                 </div>
@@ -220,10 +220,10 @@ export default function Collection() {
                                 <table className='w-full table-auto overflow-x-scroll'>
                                     <thead>
                                         <tr className='text-[#AFB6B2] text-xs gap-2'>
-                                            <th className='py-3 text-left'>Username</th>
-                                            <th className='py-3'>Discord ID</th>
-                                            <th className='py-3'>Twitter @</th>
-                                            <th className='py-3'>Amount</th>
+                                            <th className='py-3 text-left pr-3 lg:pr-0'>Username</th>
+                                            <th className='py-3 pr-3 lg:pr-0'>Discord ID</th>
+                                            <th className='py-3 pr-3 lg:pr-0'>Twitter @</th>
+                                            <th className='py-3 pr-3 lg:pr-0'>Amount</th>
                                             <th className='py-3 text-right'>Wallet Address</th>
                                         </tr>
                                     </thead>

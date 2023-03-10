@@ -1,14 +1,26 @@
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
+import { motion } from 'framer-motion';
+import Link from 'next/link'
 
 export default function Header() {
 
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const activateMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    }
+
+    // close mobile menu when user clicks on a link
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    }
 
     return (
-        <div className='hidden lg:block z-40'>
+        <div className=' z-40'>
             {/* ----TOP HEADER (LIMITED TIME OFFER)--- */}
 
-            <div className='h-[32px] w-full bg-[#F9C986]'>
+            <div className='h-[32px] w-full bg-[#F9C986] hidden lg:block'>
                 <div className='container mx-auto h-full flex items-center justify-center'>
                     <p className='text-[#1F1F1F] text-sm font-bold'>
                         Limited Time Launch Offer: <span className=' font-normal'>No upfront cost + No marketplace fee</span>
@@ -18,7 +30,7 @@ export default function Header() {
 
 
             {/* ----NAVBAR---- */}
-            <Menu as="div" className="">
+            <Menu as="div" className="hidden lg:block">
                 <div className='h-[80px] w-full bg-[#0C0D0D]'>
                     <div className='container mx-auto h-full flex items-center justify-between'>
                         <div className='flex items-center'>
@@ -135,11 +147,61 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-
-
-
-
             </Menu>
+
+
+            {/* --------------- MOBILE MENU PART ---------------- */}
+
+            <div className='fixed top-0 w-full flex lg:hidden items-center justify-between bg-[#242826] px-5 py-3'>
+
+                {/* humburger */}
+                <div onClick={activateMobileMenu} className='flex items-center gap-3'>
+                    {
+                        isMobileMenuOpen ? <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white cursor-pointer transition duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg> : <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white cursor-pointer transition duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    }
+                </div>
+
+                {/* search box */}
+                <div className='flex items-center justify-between bg-[#2c312f] rounded-md w-[230px]'>
+                    <input type='text' placeholder='Search collections' className='bg-transparent outline-non ml-2 text-white text-sm font-semibold px-2 py-3' />
+                    <picture><img src='/img/searchtail.png' alt='search' className='h-[20px] relative right-3' /></picture>
+                </div>
+
+                <picture><img src='/img/cubby.png' alt='profile' className='h-[35px] rounded-full' /></picture>
+
+
+
+            </div>
+
+            {/* --------------- MOBILE MENU COLLAPSIBLE PART ---------------- */}
+
+            {
+                isMobileMenuOpen && (
+                    <motion.div
+                        //    animate from top to bottom
+                        initial={{ y: -100 }}
+                        animate={{ y: 0 }}
+                        transition={{ duration: 0.3 }}
+
+
+                        className='shadow-md lg:hidden fixed top-[68px] z-50 right-0 w-full'>
+                        <div className='px-5 py-2 bg-[#2c312f] text-white'>
+                            <div onClick={closeMobileMenu} className='text-center font-semibold flex flex-col gap-1'>
+                                <Link href='/' className='py-3  rounded-md cursor-pointer'>Active</Link>
+                                <Link href='/' className='py-3  rounded-md cursor-pointer'>Upcoming</Link>
+                                <Link href='/presale' className='py-3 bg-[#333836] rounded-md cursor-pointer'>+ Create</Link>
+
+                            </div>
+                        </div>
+                    </motion.div>
+                )
+            }
+
+
 
 
 
